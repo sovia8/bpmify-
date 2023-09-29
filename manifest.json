@@ -3,22 +3,43 @@
     "name": "BPM Finder",
     "version": "1.0",
     "description": "Identify the BPM of songs on Spotify.",
-    "permissions": ["activeTab"],
+    "permissions": [
+        "activeTab",
+        "identity", // Add identity permission for OAuth2
+        "storage"   // Add storage permission for securely storing tokens
+    ],
     "host_permissions": [
-      "https://*.spotify.com/*"
+        "https://*.spotify.com/*"
     ],
     "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon16.png",
+            "48": "icon48.png",
+            "128": "icon128.png"
+        }
+    },
+    "icons": {
         "16": "icon16.png",
         "48": "icon48.png",
         "128": "icon128.png"
-      }
     },
-    "icons": {
-      "16": "icon16.png",
-      "48": "icon48.png",
-      "128": "icon128.png"
-    }
-  }
+    "oauth2": {
+        "client_id": "f9e8675000f54ddf9e0c21c143b6e4b3", // Replace with your Spotify client ID
+        "scopes": ["user-read-playback-state"], // Add other required scopes
+        "redirect_uri": "https://ahaccdcojcnmdijhmbgehnbaljjakeac.chromiumapp.org/oauth2", // Replace with your extension's ID
+        "response_type": "code"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.spotify.com/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "permissions": ["activeTab"]
+}
+
   
