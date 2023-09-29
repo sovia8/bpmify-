@@ -1,7 +1,7 @@
 // Function to initiate the Spotify authentication flow
 function authenticateWithSpotify() {
     // Redirect the user to Spotify's authorization URL.
-    const clientId = 'YOUR_CLIENT_ID'; // Replace with your actual Spotify client ID
+    const clientId = 'f9e8675000f54ddf9e0c21c143b6e4b3'; // Replace with your actual Spotify client ID
     const redirectUri = chrome.identity.getRedirectURL();
 
     // Define the scopes you need (e.g., user-read-playback-state) and encode them.
