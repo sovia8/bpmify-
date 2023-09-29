@@ -46,7 +46,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         const code = request.code;
         const clientId = 'f9e8675000f54ddf9e0c21c143b6e4b3'; // Replace with your actual Spotify client ID
         const clientSecret = '67b4d9634f584e5c8c7197a08a5b0892'; // Replace with your actual Spotify client secret
-        const redirectUri = 'https://ahaccdcojcnmdijhmbgehnbaljjakeac.chromiumapp.org/oauth2'; // Replace with your extension's ID
+        const redirectUri = 'https://fkamjcmhgkjjflcndpenagehoploliam.chromiumapp.org/oauth2'; // Replace with your extension's ID
         const tokenUrl = 'https://accounts.spotify.com/api/token';
 
         // Prepare the request body
