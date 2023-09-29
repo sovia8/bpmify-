@@ -27,7 +27,7 @@
     "oauth2": {
         "client_id": "f9e8675000f54ddf9e0c21c143b6e4b3", // Replace with your Spotify client ID
         "scopes": ["user-read-playback-state"], // Add other required scopes
-        "redirect_uri": "https://ahaccdcojcnmdijhmbgehnbaljjakeac.chromiumapp.org/oauth2", // Replace with your extension's ID
+        "redirect_uri": "https://fkamjcmhgkjjflcndpenagehoploliam.chromiumapp.org/oauth2", // Replace with your extension's ID
         "response_type": "code"
     },
     "background": {
